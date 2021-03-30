@@ -16,18 +16,19 @@ title: Implementation Notes
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
+English | [中文](./implementation-notes.zh.md)
 
 Before digging into details of implementations, you should read [architecture-and-requirements](./architecture-and-requirements.md) first to understand overall requirements and architecture.
 
 Here're sub topics of Submarine implementations:
 
 - [Submarine Storage](./storage-implementation.md): How to store metadata, logs, metrics, etc. of Submarine.
-- [Submarine Environment](./environments-implementation.md): How environments created, managed, stored in Submarine. 
+- [Submarine Environment](./environments-implementation.md): How environments created, managed, stored in Submarine.
 - [Submarine Experiment](./experiment-implementation.md): How experiments managed, stored, and how the predefined experiment template works.
-- [Submarine Notebook](./notebook-implementation.md): How experiments managed, stored, and how the predefined experiment template works.
+- [Submarine Notebook](./notebook-implementation.md): How to manage notebook instances and how to interact with Submarine Server to run experiments using Submarine SDK.
 - [Submarine Server](./submarine-server/architecture.md): How Submarine server is designed, architecture, implementation notes, etc.
 
-Working-in-progress designs, Below are designs which are working-in-progress, we will move them to the upper section once design & review is finished: 
+Working-in-progress designs, Below are designs which are working-in-progress, we will move them to the upper section once design & review is finished:
 
 - [Submarine HA Design](./wip-designs/submarine-clusterServer.md): How Submarine HA can be achieved, using RAFT, etc.
-- [Submarine services deployment module:](./wip-designs/submarine-launcher.md) How to deploy submarine services to k8s, YARN or cloud. 
+- [Submarine services deployment module:](./wip-designs/submarine-launcher.md) How to deploy submarine services to k8s, YARN or cloud.
