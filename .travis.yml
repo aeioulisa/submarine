@@ -224,6 +224,18 @@ matrix:
         - TEST_MODULES="-pl ${EXCLUDE_SUBMITTER_K8S},${EXCLUDE_WORKBENCH},${EXCLUDE_CLOUD},${EXCLUDE_COMMONS},${EXCLUDE_DIST},${EXCLUDE_TEST},${EXCLUDE_ALL},${EXCLUDE_SERVER},${EXCLUDE_SPARK_SECURTITY}"
         - TEST_PROJECTS=""
 
+    - name: Test submarine submitter on hadoop-3.3
+      language: java
+      jdk: openjdk8
+      dist: xenial
+      env:
+        - PROFILE="-Phadoop-3.3"
+        - BUILD_FLAG="clean package install -DskipTests -DskipRat"
+        - TEST_FLAG="test -DskipRat -am"
+        - MODULES="-pl ${EXCLUDE_SUBMITTER_K8S},${EXCLUDE_WORKBENCH},${EXCLUDE_CLOUD},${EXCLUDE_DIST}"
+        - TEST_MODULES="-pl ${EXCLUDE_SUBMITTER_K8S},${EXCLUDE_WORKBENCH},${EXCLUDE_CLOUD},${EXCLUDE_COMMONS},${EXCLUDE_DIST},${EXCLUDE_TEST},${EXCLUDE_ALL},${EXCLUDE_SERVER},${EXCLUDE_SPARK_SECURTITY}"
+        - TEST_PROJECTS=""
+
 #    Temporary disable this test, refer to SUBMARINE-672
 #    - name: Test submarine interpreter
 #      language: java

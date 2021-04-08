@@ -120,6 +120,12 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration combine.children="append">
           <argLine>-Xmx2g -Xms1g -Dfile.encoding=UTF-8</argLine>
+          <properties>
+            <property>
+              <name>junit</name>
+              <value>false</value>
+            </property>
+          </properties>
         </configuration>
       </plugin>
       <plugin>
